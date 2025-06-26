@@ -5,10 +5,8 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
 class BackgroundService {
-  // ←←←←←←←←←←←←←←←←←
-  // 直接把你在平台上看到的 sk-xxx.UFoA 全部粘过来
-  static const _openAiKey = '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';
-  // ←←←←←←←←←←←←←←←←←
+  
+  static const _openAiKey = 'sk-proj-fI-ihNJ-sD4i7.....';
 
   static Future<File> fetchBackground({
     required String storyId,
@@ -37,7 +35,6 @@ class BackgroundService {
       body: jsonEncode({
         'model': 'dall-e-3',
         'prompt': prompt,
-        // DALL·E 目前只支持这三种尺寸，请选一个：
         'size': '1024x1024',
         'n': 1,
       }),
